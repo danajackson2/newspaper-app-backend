@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2021_02_12_000546) do
 
   create_table "papers", force: :cascade do |t|
     t.datetime "date"
+    t.string "title"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
