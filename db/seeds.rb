@@ -16,15 +16,15 @@ user1 = User.create(username: 'danajackson', name:"Dana", password_digest:'test'
 user2 = User.create(username: 'emmafewer', name:"Emma", password_digest:'test')
 
 
-p1 = Paper.create(user_id: user1)
-p2 = Paper.create(user_id: user2)
+p1 = Paper.create(user_id: user1.id, title:'Test Paper 1', date:'Feb 12, 2021')
+p2 = Paper.create(user_id: user2.id, title:'Test Paper 1', date: 'Feb 13, 20201')
 
 a1 = Article.create(title: 'hi there first article', content: 'content')
 a2 = Article.create(title: 'hi there second article', content: 'content')
 
-pa1 = PaperArticleJoin.create(paper_id: p1, article_id: a1)
-pa2 = PaperArticleJoin.create(paper_id: p1, article_id: a2)
+pa1 = PaperArticleJoin.create(paper_id: p1.id, article_id: a1.id)
+pa2 = PaperArticleJoin.create(paper_id: p1.id, article_id: a2.id)
 
-pa3 = PaperArticleJoin.create(paper_id: p2, article_id: a2)
+pa3 = PaperArticleJoin.create(paper_id: p2.id, article_id: a2.id)
 
 puts 'done!'

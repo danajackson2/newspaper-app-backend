@@ -1,7 +1,7 @@
 class PapersController < ApplicationController
 
     def index
-        render json: Paper.all, include: [:articles]
+        render json: Paper.all, include: [:articles, :user]
     end
 
     def create
