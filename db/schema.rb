@@ -16,10 +16,8 @@ ActiveRecord::Schema.define(version: 2021_02_12_000546) do
   enable_extension "plpgsql"
 
   create_table "articles", force: :cascade do |t|
-    t.string "url"
     t.string "title"
     t.string "author"
-    t.text "description"
     t.text "content"
     t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
@@ -36,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_02_12_000546) do
   end
 
   create_table "papers", force: :cascade do |t|
-    t.string "date"
+    t.datetime "date"
     t.string "title"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
