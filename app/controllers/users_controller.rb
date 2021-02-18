@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    skip_before_action :authorized, only: [:create]
+    skip_before_action :authorized, only: [:create, :update, :destroy]
 
     def create
         user = User.create(user_params)
@@ -9,6 +9,17 @@ class UsersController < ApplicationController
         else
             render json: {error: 'Failed to create user'}, status: :not_acceptable
         end
+    end
+
+    def update
+        user = User.find(params[:id])
+        user.name = params[:name]
+        render :json => user
+    end 
+
+    def destroy
+        user = User.find(params[:id])
+        user.destroy
     end
 
     private
