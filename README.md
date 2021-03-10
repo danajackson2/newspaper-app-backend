@@ -47,4 +47,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Emma Fewer - emmafewer20@gmail.com
 
-Project Link: [https://github.com/danajackson2/newspaper-app-frontend](https://github.com/danajackson2/newspaper-app-frontend)
+Project Link: [https://github.com/danajackson2/newspaper-app-backend](https://github.com/danajackson2/newspaper-app-backend)
